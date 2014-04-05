@@ -15,7 +15,9 @@ def viewtemplate(request):
             
             
     else:
-        form = ContactForm() # An unbound form
+        inputvalue = request.GET.get('inputvalue')
+                
+        form = ContactForm({'inputvalue':inputvalue, 'outputvalue':inputvalue })
 
     return render(request, 'template.html', {
         'form': form,
