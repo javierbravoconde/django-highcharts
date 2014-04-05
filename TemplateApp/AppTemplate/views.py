@@ -8,13 +8,7 @@ import json
 
 def viewtemplate(request):
     if request.method == 'POST': # If the form has been submitted...
-        form = ContactForm(request.POST) # A form bound to the POST data
-        if form.is_valid(): # All validation rules pass
-            
-            inputvalue = form.cleaned_data['inputvalue']
-            form = ContactForm({'inputvalue':inputvalue, 'outputvalue':inputvalue })
-            
-            
+        pass
     else:
         inputvalue = request.GET.get('inputvalue')                
         form = ContactForm({'inputvalue':inputvalue, 'outputvalue':inputvalue })
