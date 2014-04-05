@@ -1,0 +1,17 @@
+{% extends "templatebase.html" %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block content %}
+<form action="." method="post">{% csrf_token %}
+{{ form.inputvalue }}
+{{ form.outputvalue }}
+
+
+</form>
+
+<button onclick="Dajaxice.AppTemplate.sayhello(function(d){alert(d.message);})">Hello</button>
+            
+{% endblock %}
