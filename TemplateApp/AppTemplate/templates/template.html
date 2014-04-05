@@ -7,12 +7,12 @@
 <script>
 $( document ).ready(
 
-function () {
-    data_input = [
-                ['a',   25],
-                ['b',   3],
-                ['IE', 25]
-        ]
+function () {	
+	var string_json = '{{string_json|safe}}';
+    var arr_from_json = JSON.parse(string_json);
+	
+    var data_input = arr_from_json; 
+    
     $('#container').highcharts({
         chart: {
             plotBackgroundColor: null,
