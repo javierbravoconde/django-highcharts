@@ -1,9 +1,8 @@
 {% extends "templatebase.html" %}
 
 {% block scripts %}
-<script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-
+<script src="{{ STATIC_URL }}js/highcharts/highcharts.js"></script>
+<script src="{{ STATIC_URL }}js/highcharts/modules/exporting.js"></script>
 <script>
 $( document ).ready(
 
