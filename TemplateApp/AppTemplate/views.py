@@ -13,8 +13,9 @@ def viewtemplate(request):
         inputvalue = request.GET.get('inputvalue')                
         form = ContactForm({'inputvalue':inputvalue, 'outputvalue':inputvalue })
         
-        var_array_tuple = [('a',1), ('b',2)]
-        string_json = json.dumps(var_array_tuple)
+        var_array_tuple = [('a',1), ('e',2), ('b',3), ('d',4), ('c',2)]
+        sorted_by_second = sorted(var_array_tuple, key=lambda tup: tup[1],reverse=True)
+        string_json = json.dumps(sorted_by_second)
         
 
     return render(request, 'template.html', {
